@@ -23,8 +23,9 @@ class Game {
 
     // The hangman parts
     private base: Rectangle;
+    
     // TODO declare the other parts of the hangman
-
+    private pole: Rectangle;
     /**
      * Construct a new Game.
      * 
@@ -50,6 +51,8 @@ class Game {
         this.base = new Rectangle(cx - 300, cy * 1.75, 600, 50);
         this.base.fillStyle = "brown";
         // TODO create the other parts of the hangman
+        this.pole = new Rectangle(cx - 100, cy * 1.75, 600, 50);
+        this.pole.fillStyle = "brown";
 
         // Draw the canvas
         this.drawCanvas();
@@ -69,6 +72,7 @@ class Game {
         // Draw the hangman
         this.base.drawRectangle(this.ctx);
         // TODO draw the other parts of the hangman
+        this.pole.drawRectangle(this.ctx)
     }
 
     /**
